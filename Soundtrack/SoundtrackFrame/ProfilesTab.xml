@@ -1,0 +1,108 @@
+<Ui xmlns="http://www.blizzard.com/wow/ui/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.blizzard.com/wow/ui/ ..\FrameXML\UI.xsd">
+    <Frame name="SoundtrackFrameProfilesFrameTemplate" hidden="true" virtual="true">
+        <Size>
+            <RelDimension x="0.5" y="0.8"/>
+        </Size>
+        <Anchors>
+            <Anchor point="TOP" relativeTo="SoundtrackFrame" relativePoint="TOP"/>
+        </Anchors>
+        <Layers>
+            <Layer level="BACKGROUND">
+                <FontString name="CurrentProfileNameLabel" inherits="GameFontNormal" text="Current Profile:">
+                    <Anchors>
+                        <Anchor point="TOPLEFT">
+                            <Offset>
+                                <AbsDimension x="50" y="-50"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+                <FontString name="CurrentProfileName" inherits="GameFontNormal">
+                    <Anchors>
+                        <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="CurrentProfileNameLabel">
+                            <Offset>
+                                <AbsDimension x="5" y="0"/>
+                            </Offset>
+                        </Anchor>
+                    </Anchors>
+                </FontString>
+            </Layer>
+        </Layers>
+        <Frames>
+            <EditBox name="NewProfileEditBox" inherits="SoundtrackFrame_EditBoxTemplate">
+                <Size>
+                    <AbsDimension x="100" y="22"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="CurrentProfileNameLabel">
+                        <AbsDimension x="20" y="-20"/>
+                    </Anchor>
+                </Anchors>
+            </EditBox>
+            <Button name="CreateNewProfileButton" inherits="UIPanelButtonTemplate" text="Create New Profile">
+                <Size>
+                    <AbsDimension x="200" y="22"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="TOPRIGHT" relativeTo="NewProfileEditBox">
+                        <AbsDimension x="10" y="0"/>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>ProfilesTab_CreateNewProfile()</OnClick>
+                    <OnEnter>Soundtrack.ShowTip(self, "Create New Profile", "Create a new profile with the name provided.")</OnEnter>
+                    <OnLeave>Soundtrack.HideTip()</OnLeave>
+                </Scripts>
+            </Button>
+            <Frame name="LoadProfileDropDown" inherits="UIDropDownMenuTemplate">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="NewProfileEditBox">
+                        <Offset>
+                            <AbsDimension x="-28" y="-22"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </Frame>
+            <Frame name="CopyFromProfileDropDown" inherits="UIDropDownMenuTemplate">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="LoadProfileDropDown">
+                        <Offset>
+                            <AbsDimension x="0" y="-20"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </Frame>
+            <Frame name="DeleteProfileDropDown" inherits="UIDropDownMenuTemplate">
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="CopyFromProfileDropDown">
+                        <Offset>
+                            <AbsDimension x="0" y="-20"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+            </Frame>
+            <Button name="ResetProfileButton" inherits="UIPanelButtonTemplate" text="Reset Current Profile">
+                <Size>
+                    <AbsDimension x="200" y="22"/>
+                </Size>
+                <Anchors>
+                    <Anchor point="TOPLEFT" relativePoint="BOTTOMLEFT" relativeTo="DeleteProfileDropDown">
+                        <Offset>
+                            <AbsDimension x="18" y="-20"/>
+                        </Offset>
+                    </Anchor>
+                </Anchors>
+                <Scripts>
+                    <OnClick>ProfilesTab_ResetCurrentProfile()</OnClick>
+                    <OnEnter>Soundtrack.ShowTip(self, "Reset Current Profile", "Resets the current profile to default settings.")</OnEnter>
+                    <OnLeave>Soundtrack.HideTip()</OnLeave>
+                </Scripts>
+            </Button>
+        </Frames>
+        <Scripts>
+            <OnShow>ProfilesTab_RefreshProfilesFrame()</OnShow>
+            <OnLoad>ProfilesTab_OnLoad()</OnLoad>
+        </Scripts>
+    </Frame>
+</Ui>

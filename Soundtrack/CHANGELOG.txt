@@ -1,0 +1,97 @@
+3.2.0_era
+- Bump classic era UI version number
+
+3.1.6_era
+- Remove DK and hunter misc events.
+- Completely remove pet battle stuff
+
+3.1.5_era
+- Add classic era support
+
+3.1.5
+- Bump for patch 10.1.5
+- Add SL & DF tracks to default tracks
+- Reorganized existing default tracks, may need to clear your MyTracks.lua
+
+3.0.14
+- Fix tracks replaying before another one starts, silence should work properly
+- Fix dropdowns not populating with correct values on load
+
+3.0.13
+- Bump version for 10.1.0
+- Add addon logo
+
+3.0.12
+- Bump version for 10.0.5
+
+3.0.11
+- Fix error on some item get events
+
+3.0.10
+- Item get events under misc
+
+3.0.9
+- Add profile support
+- Easier to click on expandable events
+
+3.0.8
+- Fix some bugs with the windows powershell library generator. Shout out to Dax Belmont for bringing them to my attention.
+
+3.0.7
+- Rework how to execute the bash library generator 
+
+3.0.4
+- Dragonriding race misc event under Status
+- Soar misc event under Evoker
+- Library generation without needing Python 2.7 or Java
+
+3.0.3
+- Redo minimap button to lock to the minimap correctly
+
+3.0.2
+- Fix buff/debuff custom events
+
+3.0.1
+- Filter events by text
+- Collapse all and expand all buttons on the zone page
+
+3.0.0
+Dragonflight release
+-Fix errors when loading, update some things to work with DF UI changes
+
+2.9.1
+Fixed:
+-Playback Frame Border added and moveable
+-TrackFrame Info Window is movable again
+
+2.9.0
+Shadowlands Release
+Fixed:
+-UI Frames and made movable again
+-Added GoTest2 fixes to Battle and Zone events
+-Clicking on Sorting Headers in Track List error has been fixed
+-Highlight in  Events List has highlight bar as Track List
+
+2.8.3
+Fixed:
+-Victory Music triggers
+-Battle Escalation tweak (Thanks again GoTest!)
+
+2.8.2
+Fixed: 
+-Tooltips display again
+-Added back Expand and Collapse graphic button on Event List
+-Users report Generated MyTrack.lua not showing Track in game (should be fixed)
+-Addon is no longer 'OUT OF DATE'
+
+To do:
+Playback controls and track information do not move.
+Battle music switches between normal/elite during combat.
+Other Events may Be broken
+Pet Battle at Meneragie causes an Error due to location. (didn't have time to debug this)
+
+
+2.8.1
+Fixed: 
+Updated default tracks for 8.0.1
+

@@ -1,0 +1,9 @@
+## Interface: 11503
+## Title: Soundtrack Music
+## Version: 1.0_era
+## Author: Katherine Beegle, Dozer1170/Gart
+## Notes: Custom Music for Soundtrack.
+## RequiredDeps: Soundtrack
+## SavedVariables:
+## IconTexture: Interface\Icons\INV_Misc_Flute_01
+MyTracks.lua

@@ -1,0 +1,28 @@
+## Interface: 11503
+## Title: Soundtrack
+## Version: 3.2.0_era
+## Author: Anthony Brien, Katherine Beegle, FluffyBearLina, CSCIguy, Sciz, Dozer1170/Gart
+## Notes: Music customization system.
+## OptionalDeps: myAddOns
+## RequiredDeps: 
+## SavedVariables: Soundtrack_Settings, Soundtrack_CustomEvents, Soundtrack_Events, SoundtrackDB
+## IconTexture: Interface\Icons\INV_Misc_Flute_01
+Embeds.xml
+Soundtrack.xml
+OldSaveMigrator.lua
+Utils/DebugUtils.lua
+SoundtrackFrame/SoundtrackFrame.xml
+SoundtrackFrame/SoundtrackFrame.lua
+SoundtrackFix.lua
+SoundtrackBattleFrame.xml
+SoundtrackBattleEvents.lua
+SoundtrackCustomFrame.xml
+SoundtrackCustomEvents.lua
+SoundtrackMiscFrame.xml
+SoundtrackDanceFrame.xml
+SoundtrackMountFrame.xml
+SoundtrackZoneFrame.xml
+SoundtrackMinimap.lua
+SoundtrackNowPlayingFrame.xml
+SoundtrackControlFrame.xml
+SoundtrackReportFrame.xml
