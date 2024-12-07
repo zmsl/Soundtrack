@@ -135,6 +135,7 @@ if not LOCALIZATION_LOADED then
     SOUNDTRACK_LEVEL_UP = "Group & Self/Level Up"
     SOUNDTRACK_LFG_COMPLETE = "Group & Self/LFG Complete"
     SOUNDTRACK_QUEST_COMPLETE = "Group & Self/Quest Complete"
+    SOUNDTRACK_RESTING = "Group & Self/Resting"
 
     -- Item Get
     SOUNDTRACK_ITEM_GET = "Item Get"

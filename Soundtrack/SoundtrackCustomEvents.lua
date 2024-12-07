@@ -727,6 +727,32 @@ function Soundtrack.CustomEvents.MiscInitialize()
 		true
 	);
 
+	Soundtrack.CustomEvents.RegisterEventScript(	-- Resting
+		SoundtrackMiscDUMMY,
+		SOUNDTRACK_RESTING,
+		ST_MISC,
+		"PLAYER_UPDATE_RESTING",
+		ST_MINIMAP_LVL,
+        true,
+        function()
+			local nonInnZones = {
+				["Ironforge"] = 1,
+				["Stormwind City"] = 1,
+				["Darnassus"] = 1,
+				["Orgrimmar"] = 1,
+				["Thunder Bluff"] = 1,
+				["Undercity"] = 1
+			}
+			local currentZone = GetZoneText()
+			if IsResting() and (not nonInnZones[currentZone]) then
+				Soundtrack_Custom_PlayEvent(ST_MISC, SOUNDTRACK_RESTING)
+			else
+				Soundtrack_Custom_StopEvent(ST_MISC, SOUNDTRACK_RESTING)
+			end
+        end,
+		false
+	);
+
 	Soundtrack.CustomEvents.RegisterBuffEvent(SOUNDTRACK_DRAGONRIDING_RACE, ST_MISC, 369968, ST_BUFF_LVL, true, false)
 
 	--Soundtrack.CustomEvents.RegisterBuffEvent(SOUNDTRACK_DK, ST_MISC, 0, 1, false, false);
